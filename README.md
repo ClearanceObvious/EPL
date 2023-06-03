@@ -1,6 +1,32 @@
 # EPL
 EPL is a new interpreter programming language i've been working on, which has a tree-walk interpreter coded in python, and a bytecode interpreter which I am currently working on, in C++. EPL was originally made for the creation of a book "Creating an interpreter in python" which I worked on. EPL stands for "Easy Programming Language"
 
+# Running EPL Files
+Once you have installed the required files, you can run "main.py" with the appropriate arguments to execute the code.
+
+
+If you want a normal execution, you use:
+```
+py main.py -i file.epl
+```
+
+
+If you want a normal execution with debug information, you use:
+```
+py main.py -i file.epl -d
+```
+
+
+If you want a normal execution with full debug information (including gloals), you use:
+```
+py main.py -i file.epl -fd
+```
+
+
+If you want to compile to .gof intermediate representation, you use:
+```
+py main.py -c file.epl
+```
 
 # EPL Syntax
 Syntax in EPL is a combination of python and javascript with the intention of making a language as beginner-friendly as possible.
@@ -95,11 +121,12 @@ This is a never ending loop which prints "Hello World!". (TIP: Press "CTRL+C" to
 // For Loops [1]
 for index in 0, 100 {
     log(index)
+    if index == 69 {break}
 }
 ```
 
 For loops have changed entirely in syntax compared to RUX. RUX has the C-Style for loops, while EPL has a very friendly approach in for loops, this one
-basically going from 0 to 100.
+basically going from 0 to 69.
 
 ```js
 // For Loops [2]
